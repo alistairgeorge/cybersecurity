@@ -63,9 +63,11 @@ The primary objective of ethical hacking is to identify and address application,
 #### Legal and Ethical Considerations
 Ethical hacking is entirely legal, but it operates under strict guidelines. Unlike malicious hackers, ethical hackers have explicit permission to probe systems and search for vulnerabilities. Key aspects of the legality include:
 
-Permission: Ethical hackers must have clear, written permission to probe systems and agree to respect the privacy of any data seen during testing.
-Scope of Work: Before an ethical hacking engagement, there should be a clear understanding of the scope of work, including which systems can be tested and which testing methods are allowed.
-Reporting: Ethical hackers must document their findings and present them to the organization, typically including identified vulnerabilities and recommended remediation strategies.
+- Permission: Ethical hackers must have clear, written permission to probe systems and agree to respect the privacy of any data seen during testing.
+
+- Scope of Work: Before an ethical hacking engagement, there should be a clear understanding of the scope of work, including which systems can be tested and which testing methods are allowed.
+
+- Reporting: Ethical hackers must document their findings and present them to the organization, typically including identified vulnerabilities and recommended remediation strategies.
 
 ### 2. Networking Basics
 #### TCP/IP
