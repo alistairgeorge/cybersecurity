@@ -70,11 +70,40 @@ Ethical hacking is entirely legal, but it operates under strict guidelines. Unli
 - Reporting: Ethical hackers must document their findings and present them to the organization, typically including identified vulnerabilities and recommended remediation strategies.
 
 ### 2. Networking Basics
-#### TCP/IP
-#### OSI Model
+
+Computer networking is a cornerstone of modern technology, enabling the interconnected systems that power the Internet, business communications, and everyday digital interactions. Understanding the fundamentals of computer networking is essential for anyone involved in technology, from enthusiasts to professionals. A computer network is a collection of interconnected devices that share resources and information. These devices can include computers, servers, printers, and other hardware. Networks allow for the efficient exchange of data, enabling various applications such as email, file sharing, and internet browsing.
+
+- #### TCP/IP
+TCP/IP stands for Transmission Control Protocol/ Internet Protocol. It is a set of conventions or rules and methods that are used to interconnect network devices on the Internet. The internet protocol suite is commonly known as TCP/IP, as the foundational protocols in the suite are Transmission Control Protocol and Internet Protocol. It chooses how the information will be traded over the web through end-to-end communications that incorporate how the information ought to be organized into bundles (bundles of data), addressed, sent, and received at the goal. This communication protocol can also be utilized to interconnect organize devices in a private network such as an intranet or an extranet.
+
+- #### OSI Model
+The OSI model, created in 1984 by ISO , is a reference framework that explains the process of transmitting data between computers. It is divided into seven layers that work together to carry out specialised network functions , allowing for a more systematic approach to networking.When we transfer information from one device to another, it travels through 7 layers of OSI model. First data travels down through 7 layers from the sender’s end and then climbs back 7 layers on the receiver’s end.
+
+Data flows through the OSI model in a step-by-step process:
+
+ - Application Layer: Applications create the data.
+ - Presentation Layer: Data is formatted and encrypted.
+ - Session Layer: Connections are established and managed.
+ - Transport Layer: Data is broken into segments for reliable delivery.
+ - Network Layer : Segments are packaged into packets and routed.
+ - Data Link Layer: Packets are framed and sent to the next device.
+ - Physical Layer: Frames are converted into bits and transmitted physically.
+ - Each layer adds specific information to ensure the data reaches its destination correctly, and these steps are reversed upon arrival.
 #### Subnetting
+When a bigger network is divided into smaller networks, to maintain security, then that is known as Subnetting. So, maintenance is easier for smaller networks. For example, if we consider a class A address, the possible number of hosts is 224 for each network, it is obvious that it is difficult to maintain such a huge number of hosts, but it would be quite easier to maintain if we divide the network into small parts.  
+
+Uses of Subnetting
+Subnetting helps in organizing the network in an efficient way which helps in expanding the technology for large firms and companies.
+Subnetting is used for specific staffing structures to reduce traffic and maintain order and efficiency.
+Subnetting divides domains of the broadcast so that traffic is routed efficiently, which helps in improving network performance.
+Subnetting is used in increasing network security.
+The network can be divided into two parts: To divide a network into two parts, you need to choose one bit for each Subnet from the host ID part.
 #### DNS
+DNS (Domain Name System) allows you to interact with devices on the Internet without having to remember long strings of numbers. Each computer on the Internet has its own unique address, known as an IP address, just like every home has a unique address for sending direct mail. 104.26.10.228 is an IP address consisting of four sets of numbers extending from 0 to 255 separated by a period. It’s not easy having to remember this complicated collection of numbers every time you want to access a website, which is where DNS comes in handy.
 #### DHCP 
+Dynamic Host Configuration Protocol is a network protocol used to automate the process of assigning IP addresses and other network configuration parameters to devices (such as computers, smartphones, and printers) on a network. Instead of manually configuring each device with an IP address, DHCP allows devices to connect to a network and receive all necessary network information, like IP address, subnet mask, default gateway, and DNS server addresses, automatically from a DHCP server.
+
+This makes it easier to manage and maintain large networks, ensuring devices can communicate effectively without conflicts in their network settings. DHCP plays a crucial role in modern networks by simplifying the process of connecting devices and managing network resources efficiently.
 ### 3. Operating Systems
 #### Linux
 #### Windows
