@@ -92,7 +92,8 @@ Data flows through the OSI model in a step-by-step process:
 #### Subnetting
 When a bigger network is divided into smaller networks, to maintain security, then that is known as Subnetting. So, maintenance is easier for smaller networks. For example, if we consider a class A address, the possible number of hosts is 224 for each network, it is obvious that it is difficult to maintain such a huge number of hosts, but it would be quite easier to maintain if we divide the network into small parts.  
 
-Uses of Subnetting
+**Uses of Subnetting**
+
 Subnetting helps in organizing the network in an efficient way which helps in expanding the technology for large firms and companies.
 Subnetting is used for specific staffing structures to reduce traffic and maintain order and efficiency.
 Subnetting divides domains of the broadcast so that traffic is routed efficiently, which helps in improving network performance.
