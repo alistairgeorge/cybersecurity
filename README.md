@@ -90,8 +90,11 @@ Data flows through the OSI model in a step-by-step process:
  - Physical Layer: Frames are converted into bits and transmitted physically.
  
  Each layer adds specific information to ensure the data reaches its destination correctly, and these steps are reversed upon arrival.
+
+[Video for OSI Model by RealPars](https://youtu.be/Ilk7UXzV_Qc?si=otVOm-00iCOGoS7i)
+
 #### Subnetting
-When a bigger network is divided into smaller networks, to maintain security, then that is known as Subnetting. So, maintenance is easier for smaller networks. For example, if we consider a class A address, the possible number of hosts is 224 for each network, it is obvious that it is difficult to maintain such a huge number of hosts, but it would be quite easier to maintain if we divide the network into small parts.  
+When a bigger network is divided into smaller networks, to maintain security, then that is known as Subnetting. So, maintenance is easier for smaller networks. For example, if we consider a class A address, the possible number of hosts is 224 for each network. It is obvious that it is difficult to maintain such a huge number of hosts, but it would be much easier to maintain if we divide the network into small parts.  
 
 **Uses of Subnetting**
 
