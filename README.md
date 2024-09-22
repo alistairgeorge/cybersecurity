@@ -155,11 +155,14 @@ Antivirus software usually performs the following basic functions:
 - Removes any malicious software it detects either automatically in the background or notifies users of infections and prompts them to clean the files.
 - To scan systems comprehensively, antivirus software must generally be given privileged access to the entire system. This makes antivirus software itself a common target for attackers, and researchers have discovered remote code execution and other serious vulnerabilities in antivirus software products in recent years.
 #### IDS/IPS 
-**IDS**:A system called an intrusion detection system (IDS) observes network traffic for malicious transactions and sends immediate alerts when it is observed. It is software that checks a network or system for malicious activities or policy violations. Each illegal activity or violation is often recorded either centrally using an SIEM system or notified to an administration. IDS monitors a network or system for malicious activity and protects a computer network from unauthorized access from users, including perhaps insiders. The intrusion detector learning task is to build a predictive model (i.e. a classifier) capable of distinguishing between ‘bad connections’ (intrusion/attacks) and ‘good (normal) connections’.
+**IDS**:A system called an intrusion detection system (IDS) observes network traffic for malicious transactions and sends immediate alerts when it is observed. It is software that checks a network or system for malicious activities or policy violations. Each illegal activity or violation is often recorded either centrally using an SIEM system or notified to an administration. 
+
+IDS monitors a network or system for malicious activity and protects a computer network from unauthorized access from users, including perhaps insiders. The intrusion detector learning task is to build a predictive model (i.e. a classifier) capable of distinguishing between ‘bad connections’ (intrusion/attacks) and ‘good (normal) connections’.
 
 An IDS (Intrusion Detection System) monitors the traffic on a computer network to detect any suspicious activity.
 It analyzes the data flowing through the network to look for patterns and signs of abnormal behavior.
 The IDS compares the network activity to a set of predefined rules and patterns to identify any activity that might indicate an attack or intrusion.
+
 If the IDS detects something that matches one of these rules or patterns, it sends an alert to the system administrator.
 The system administrator can then investigate the alert and take action to prevent any damage or further intrusion.
 
@@ -169,9 +172,19 @@ The system administrator can then investigate the alert and take action to preve
 
 IPS typically record information related to observed events, notify security administrators of important observed events and produce reports. Many IPS can also respond to a detected threat by attempting to prevent it from succeeding. They use various response techniques, which involve the IPS stopping the attack itself, changing the security environment or changing the attack’s content. 
 
+There are several techniques that intrusion prevention systems use to identify threats:
+
+- Signature-based: This method matches the activity to signatures of well-known threats. One drawback to this method is that it can only stop previously identified attacks and won’t be able to recognize new ones.
+
+- Anomaly-based: This method monitors for abnormal behavior by comparing random samples of network activity against a baseline standard. It is more robust than signature-based monitoring, but it can sometimes produce false positives. Some newer and more advanced intrusion prevention systems use artificial intelligence and machine learning technology to support anomaly-based monitoring.
+
+- Policy-based: This method is somewhat less common than signature-based or anomaly-based monitoring. It employs security policies defined by the enterprise and blocks activity that violates those policies. This requires an administrator to set up and configure security policies.
+
 **Comparison:**
 
-Intrusion prevention systems are contemplated as augmentation of Intrusion Detection Systems (IDS) because both IPS and IDS operate network traffic and system activities for malicious activity. When IDS detects intrusion it only alerts network administration while Intrusion Prevention System(IPS) blocks the malicious packets before it reaches to destination.
+Intrusion prevention systems are contemplated as augmentation of Intrusion Detection Systems (IDS) because both IPS and IDS operate network traffic and system activities for malicious activity. 
+
+When IDS detects intrusion it only alerts network administration while Intrusion Prevention System(IPS) blocks the malicious packets before it reaches to destination.
 
 ### 5. Programming Languages
 #### Python
