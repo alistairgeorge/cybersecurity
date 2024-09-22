@@ -116,9 +116,63 @@ This makes it easier to manage and maintain large networks, ensuring devices can
 #### Command Line Basics 
 ### 4. Cybersecurity Fundamentals
 #### Encryption
+
+Data Encryption is a method of preserving data confidentiality by transforming it into ciphertext, which can only be decoded using a unique decryption key produced at the time of the encryption or before it. The conversion of plaintext into ciphertext is known as encryption.
+
+Key Objective of Encryption Data
+- Confidentiality: Encryption ensures that only authorized parties can get access to data and recognize the information.
+- Data Integrity: Encryption can also provide data integrity by making sure that the encrypted data remains unchanged during transmission. Any unauthorized changes to the encrypted information will render it undecipherable or will fail integrity checks.
+- Authentication: Encryption may be used as part of authentication mechanisms to verify the identification of the communication party.
+- Non-Repudiation: Through encryption, events can make sure that they cannot deny their involvement in growing or sending a selected piece of data.
+
+The significance of encryption cannot be overstated in any way. Even though your data is stored in a standard infrastructure, it is still possible for it to be hacked. There’s always the chance that data will be compromised, but with data encryption, your information will be much more secure. Consider it this way for a moment. If your data is stored in a secure system, encrypting it before sending it out will keep it safe.
 #### Firewalls
+
+A firewall is a network security device, either hardware or software-based, which monitors all incoming and outgoing traffic and based on a defined set of security rules accepts, rejects, or drops that specific traffic.
+
+- Accept: allow the traffic
+- Reject: block the traffic but reply with an “unreachable error”
+- Drop: block the traffic with no reply
+
+
+ Firewalls typically welcome incoming connections that are allowed to access a network. The security systems will allow or block data packets based on existing security rules. Firewalls build checkpoints that filter web traffic. These systems let you review and act upon rogue network traffic before the attacked network experiences any adverse effects.
+
+With a dependable firewall in place, only trusted sources and IP addresses can access your client’s systems. Some firewalls can also monitor audit logs to find connections and traffic that have gotten through.
+
+Use firewalls to gate the borders of private networks and the host devices. Ensure that you include robust firewalls when setting up user access controls. You can set up these barriers on user computers or dedicated computers on the network.
+
 #### Antivirus
+
+Antivirus software (antivirus program) is a security program designed to prevent, detect, search and remove viruses and other types of malware from computers, networks and other devices.
+It is typically installed on a computer as a proactive approach to cybersecurity, an antivirus program can help mitigate a variety of cyber threats, including keyloggers, browser hijackers, Trojan horses, worms, rootkits, spyware, adware, botnets, phishing attempts and ransomware attacks.
+
+Antivirus software typically runs as a background process, scanning computers, servers or mobile devices to detect and restrict the spread of malware. Many antivirus software programs include real-time threat detection and protection to guard against potential vulnerabilities and perform system scans that monitor device and system files, looking for possible risks.
+
+Antivirus software usually performs the following basic functions:
+- Scans directories or specific files against a library of known malicious signatures to detect abnormal patterns indicating the presence of malicious software.
+- Enables users to schedule scans so they run automatically.
+- Lets users initiate new scans at any time.
+- Removes any malicious software it detects either automatically in the background or notifies users of infections and prompts them to clean the files.
+- To scan systems comprehensively, antivirus software must generally be given privileged access to the entire system. This makes antivirus software itself a common target for attackers, and researchers have discovered remote code execution and other serious vulnerabilities in antivirus software products in recent years.
 #### IDS/IPS 
+**IDS**:A system called an intrusion detection system (IDS) observes network traffic for malicious transactions and sends immediate alerts when it is observed. It is software that checks a network or system for malicious activities or policy violations. Each illegal activity or violation is often recorded either centrally using an SIEM system or notified to an administration. IDS monitors a network or system for malicious activity and protects a computer network from unauthorized access from users, including perhaps insiders. The intrusion detector learning task is to build a predictive model (i.e. a classifier) capable of distinguishing between ‘bad connections’ (intrusion/attacks) and ‘good (normal) connections’.
+
+An IDS (Intrusion Detection System) monitors the traffic on a computer network to detect any suspicious activity.
+It analyzes the data flowing through the network to look for patterns and signs of abnormal behavior.
+The IDS compares the network activity to a set of predefined rules and patterns to identify any activity that might indicate an attack or intrusion.
+If the IDS detects something that matches one of these rules or patterns, it sends an alert to the system administrator.
+The system administrator can then investigate the alert and take action to prevent any damage or further intrusion.
+
+**IPS**: Intrusion Prevention System is also known as Intrusion Detection and Prevention System. It is a network security application that monitors network or system activities for malicious activity. Major functions of intrusion prevention systems are to identify malicious activity, collect information about this activity, report it and attempt to block or stop it. 
+
+
+
+IPS typically record information related to observed events, notify security administrators of important observed events and produce reports. Many IPS can also respond to a detected threat by attempting to prevent it from succeeding. They use various response techniques, which involve the IPS stopping the attack itself, changing the security environment or changing the attack’s content. 
+
+**Comparison:**
+
+Intrusion prevention systems are contemplated as augmentation of Intrusion Detection Systems (IDS) because both IPS and IDS operate network traffic and system activities for malicious activity. When IDS detects intrusion it only alerts network administration while Intrusion Prevention System(IPS) blocks the malicious packets before it reaches to destination.
+
 ### 5. Programming Languages
 #### Python
 #### JavaScript
