@@ -166,7 +166,7 @@ IDS monitors a network or system for malicious activity and protects a computer 
 
 
 Intrusion Detection System Evasion Techniques:
-- Fragmentation: Dividing the packet into smaller packet called fragment and the process is known as fragmentation. This makes it impossible to identify an intrusion because there can’t be a malware signature.
+- Fragmentation: Dividing the packet into smaller packets called fragments. This makes it impossible to identify an intrusion because there can’t be a malware signature.
 - Packet Encoding: Encoding packets using methods like Base64 or hexadecimal can hide malicious content from signature-based IDS.
 - Traffic Obfuscation: By making message more complicated to interpret, obfuscation can be utilised to hide an attack and avoid detection.
 - Encryption: Several security features, such as data integrity, confidentiality, and data privacy, are provided by encryption. Unfortunately, security features are used by malware developers to hide attacks and avoid detection.
