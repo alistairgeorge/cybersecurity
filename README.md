@@ -166,6 +166,12 @@ The IDS compares the network activity to a set of predefined rules and patterns 
 If the IDS detects something that matches one of these rules or patterns, it sends an alert to the system administrator.
 The system administrator can then investigate the alert and take action to prevent any damage or further intrusion.
 
+Intrusion Detection System Evasion Techniques:
+- Fragmentation: Dividing the packet into smaller packet called fragment and the process is known as fragmentation. This makes it impossible to identify an intrusion because there can’t be a malware signature.
+- Packet Encoding: Encoding packets using methods like Base64 or hexadecimal can hide malicious content from signature-based IDS.
+- Traffic Obfuscation: By making message more complicated to interpret, obfuscation can be utilised to hide an attack and avoid detection.
+- Encryption: Several security features, such as data integrity, confidentiality, and data privacy, are provided by encryption. Unfortunately, security features are used by malware developers to hide attacks and avoid detection.
+
 **IPS**: Intrusion Prevention System is also known as Intrusion Detection and Prevention System. It is a network security application that monitors network or system activities for malicious activity. Major functions of intrusion prevention systems are to identify malicious activity, collect information about this activity, report it and attempt to block or stop it. 
 
 
