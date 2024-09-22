@@ -180,7 +180,7 @@ There are several techniques that intrusion prevention systems use to identify t
 
 - Policy-based: This method is somewhat less common than signature-based or anomaly-based monitoring. It employs security policies defined by the enterprise and blocks activity that violates those policies. This requires an administrator to set up and configure security policies.
 
-**Compariso of IDS and IPS:**
+**Comparision of IDS and IPS:**
 
 Intrusion prevention systems are contemplated as augmentation of Intrusion Detection Systems (IDS) because both IPS and IDS operate network traffic and system activities for malicious activity. 
 
