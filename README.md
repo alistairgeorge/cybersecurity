@@ -155,16 +155,15 @@ Antivirus software usually performs the following basic functions:
 - Removes any malicious software it detects either automatically in the background or notifies users of infections and prompts them to clean the files.
 - To scan systems comprehensively, antivirus software must generally be given privileged access to the entire system. This makes antivirus software itself a common target for attackers, and researchers have discovered remote code execution and other serious vulnerabilities in antivirus software products in recent years.
 #### IDS/IPS 
-**IDS**:A system called an intrusion detection system (IDS) observes network traffic for malicious transactions and sends immediate alerts when it is observed. It is software that checks a network or system for malicious activities or policy violations. Each illegal activity or violation is often recorded either centrally using an SIEM system or notified to an administration. 
-
-IDS monitors a network or system for malicious activity and protects a computer network from unauthorized access from users, including perhaps insiders. The intrusion detector learning task is to build a predictive model (i.e. a classifier) capable of distinguishing between ‘bad connections’ (intrusion/attacks) and ‘good (normal) connections’.
-
-An IDS (Intrusion Detection System) monitors the traffic on a computer network to detect any suspicious activity.
+**IDS**:An IDS (Intrusion Detection System) monitors the traffic on a computer network to detect any suspicious activity.
 It analyzes the data flowing through the network to look for patterns and signs of abnormal behavior.
 The IDS compares the network activity to a set of predefined rules and patterns to identify any activity that might indicate an attack or intrusion.
 
 If the IDS detects something that matches one of these rules or patterns, it sends an alert to the system administrator.
 The system administrator can then investigate the alert and take action to prevent any damage or further intrusion.
+IDS monitors a network or system for malicious activity and protects a computer network from unauthorized access from users, including perhaps insiders. The intrusion detector learning task is to build a predictive model (i.e. a classifier) capable of distinguishing between ‘bad connections’ (intrusion/attacks) and ‘good (normal) connections’.
+
+
 
 Intrusion Detection System Evasion Techniques:
 - Fragmentation: Dividing the packet into smaller packet called fragment and the process is known as fragmentation. This makes it impossible to identify an intrusion because there can’t be a malware signature.
@@ -172,7 +171,7 @@ Intrusion Detection System Evasion Techniques:
 - Traffic Obfuscation: By making message more complicated to interpret, obfuscation can be utilised to hide an attack and avoid detection.
 - Encryption: Several security features, such as data integrity, confidentiality, and data privacy, are provided by encryption. Unfortunately, security features are used by malware developers to hide attacks and avoid detection.
 
-**IPS**: Intrusion Prevention System is also known as Intrusion Detection and Prevention System. It is a network security application that monitors network or system activities for malicious activity. Major functions of intrusion prevention systems are to identify malicious activity, collect information about this activity, report it and attempt to block or stop it. 
+**IPS**: IPS (Intrusion Prevention System) is a network security application that monitors network or system activities for malicious activity. It is also known as Intrusion Detection and Prevention System.  Major functions of intrusion prevention systems are to identify malicious activity, collect information about this activity, report it and attempt to block or stop it. 
 
 
 
