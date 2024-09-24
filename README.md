@@ -203,8 +203,18 @@ When IDS detects intrusion it only alerts network administration while Intrusion
 #### Vulnerability Scanning 
 ### 7. Exploitation
 #### Common Vulnerabilities and Exploits
+Any flaw in an organization’s internal controls, system procedures, or information systems is a vulnerability in cyber security. Cybercriminals and Hackers may target these vulnerabilities and exploit them through the points of vulnerability.
+
+These hackers can enter the networks without authorization and seriously harm data privacy. Data being a gold mine in this modern world is something that has to be secured preciously. As a result, it is crucial to constantly check for cybersecurity vulnerabilities because flaws in a network could lead to a complete compromise of an organization’s systems.
 #### Metasploit Framework
+It is an open-source project which offers the public resources to develop codes and research security vulnerabilities. It permits the network administrators for breaking their network to recognize security threats and also document which vulnerability requires to be defined first.
+
+It is a type of project that facilitates Pen (Penetration) testing software. Also, it offers tools to automate the comparison of a vulnerability of a program and its patched (repaired) version. It also offers advanced evasion and anti-forensic tools. A few of these tools are created into the framework of Metasploit.
 #### Buffer Overflows 
+A buffer is a temporary area for data storage. When more data (than was originally allocated to be stored) gets placed by a program or system process, the extra data overflows. It causes some of that data to leak out into other buffers, which can corrupt or overwrite whatever data they were holding.
+In a buffer-overflow attack, the extra data sometimes holds specific instructions for actions intended by a hacker or malicious user; for example, the data could trigger a response that damages files, changes data or unveils private information.
+
+Attacker would use a buffer-overflow exploit to take advantage of a program that is waiting on a user’s input. There are two types of buffer overflows: stack-based and heap-based. Heap-based, which are difficult to execute and the least common of the two, attack an application by flooding the memory space reserved for a program. Stack-based buffer overflows, which are more common among attackers, exploit applications and programs by using what is known as a stack memory space used to store user input.
 ### 8. Web Application Security
 #### OWASP Top Ten
 #### SQL Injection
@@ -215,7 +225,19 @@ When IDS detects intrusion it only alerts network administration while Intrusion
 #### Wireless Attacks 
 ### 10. Social Engineering
 #### Phishing
+
+Phishing is a form of online fraud in which hackers attempt to get your private information such as passwords, credit cards, or bank account data. This is usually done by sending false emails or messages that appear to be from trusted sources like banks or well-known websites. They aim to convince you so that they can manage to have your information and use it as a fraudster.
+
+Phishing got its name from “phish” meaning fish. It’s a common phenomenon to put bait for the fish to get trapped. Similarly, phishing works. It is an unethical way to dupe the user or victim to click on harmful sites. The attacker crafts the harmful site in such a way that the victim feels it to be an authentic site, thus falling prey to it. The most common mode of phishing is by sending spam emails that appear to be authentic and thus, taking away all credentials from the victim. The main motive of the attacker behind phishing is to gain confidential information like:
+
+Password
+Credit card details
+Social security numbers
+Date of birth
+The attacker uses this information to further target the user impersonate the user and cause data theft. The most common type of phishing attack happens through email. Phishing victims are tricked into revealing information that they think should be kept private. The original logo of the email is used to make the user believe that it is indeed the original email. But if we carefully look into the details, we will find that the URL or web address is not authentic. 
 #### Spear Phishing
+
+Phishing attacks are a persistent threat in a highly digital world, one that is an ongoing concern for both individuals and organizations. Spear phishing attacks are a subset of these types of cybercrimes that are of particular concern.
 #### Social Engineering Toolkit (SET) 
 ### 11. Sniffing and Spoofing
 #### Man-in-the-Middle Attacks
