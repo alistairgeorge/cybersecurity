@@ -266,8 +266,40 @@ QRCodes
 … and many others.
 ### 11. Sniffing and Spoofing
 #### Man-in-the-Middle Attacks
+
+A man in the middle (MITM) attack is a general term for when a perpetrator positions himself in a conversation between a user and an application—either to eavesdrop or to impersonate one of the parties, making it appear as if a normal exchange of information is underway.
+
+The goal of an attack is to steal personal information, such as login credentials, account details and credit card numbers. Targets are typically the users of financial applications, Software as a Service (SaaS) businesses, e-commerce sites and other websites where logging in is required.
+
+Information obtained during an attack could be used for many purposes, including identity theft, unapproved fund transfers or an illicit password change.
+
+Additionally, it can be used to gain a foothold inside a secured perimeter during the infiltration stage of an advanced persistent threat (APT) assault.
 #### ARP Spoofing
+
+ARP stands for Address Resolution Protocol. It is a communication protocol that is one of the important network layer protocols in the OSI model and is used to determine a device’s Media Access Control (MAC) address based on its Internet Protocol (IP) address in order to communicate with other devices on the network.
+
+ARP spoofing is a cyber attack that allows hackers to intercept communications between network devices on a network. Hackers can also use ARP spoofing to alter or block all traffic between devices on the network.
+
+Working:
+- Scanning: Hackers use ARP spoofing tools to scan the IP and MAC addresses of hosts.
+- Selection and Launching: Hackers select their target and then send ARP packets over the local network containing the hacker’s MAC address and the target’s IP address.
+- Accessing: Once the ARP cache on the host on the local network is corrupted. Then the data the host wants to send to the victim is sent to the hacker instead of the victim. Hackers can steal data or launch other attacks from here.
+
 #### DNS Spoofing 
+Domain Name System (DNS) poisoning happens when fake information is entered into the cache of a domain name server, resulting in DNS queries producing an incorrect reply, sending users to the wrong website. DNS poisoning also goes by the terms “DNS spoofing” and “DNS cache poisoning.”
+
+In regard to DNS, the most prominent threats are two-fold:
+
+- DNS spoofing is the resulting threat which mimics legitimate server destinations to redirect a domain’s traffic. Unsuspecting victims end up on malicious websites, which is the goal that results from various methods of DNS spoofing attacks.
+- DNS cache poisoning is a user-end method of DNS spoofing, in which your system logs the fraudulent IP address in your local memory cache. This leads the DNS to recall the bad site specifically for you, even if the issue gets resolved or never existed on the server-end.
+
+Here are some common risks of DNS poisoning and spoofing:
+
+- Data theft: Banking websites and popular online retailers are easily hit, meaning any password, credit card, or personal information may be compromised. The redirects would be to phishing websites designed to collect your information.
+
+- Malware infection: With a spoof redirecting you, the destination could end up being a site infested with malicious downloads. Drive by downloads are an easy way to automate the infection of your system. Ultimately, if you’re not using internet security, you’re exposed to risks like spyware, keyloggers, or worms.
+- Halted security updates: If spoofed sites include internet security providers, legitimate security updates will not be performed. As a result, your computer may be exposed to additional threats such as viruses or Trojans.
+- Censorship: Censorship is a risk that is actually commonplace in some parts of the world. For example, China uses modifications to the DNS to ensure all websites viewed within the country are approved. This nation-level block, dubbed the “Great Firewall”, is one example of how powerful DNS spoofing can be.
 ### 12. Malware Analysis
 #### Types of Malware
 #### Sandbox Analysis
