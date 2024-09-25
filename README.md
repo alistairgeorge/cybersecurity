@@ -239,6 +239,31 @@ The attacker uses this information to further target the user impersonate the us
 
 Phishing attacks are a persistent threat in a highly digital world, one that is an ongoing concern for both individuals and organizations. Spear phishing attacks are a subset of these types of cybercrimes that are of particular concern.
 #### Social Engineering Toolkit (SET) 
+
+The Social-Engineer Toolkit (SET) is a collection of Python scripts written by David Kennedy (ReL1K) which can help automate many aspects of social engineering attacks. It is integrated with Metasploit in order to use Metasploit’s exploit repository as well as the available exploit payloads. SET focuses on a number of social engineering-based attacks and provides the ability to easily create the necessary files and templates for those attacks. The current version is available through the web site https://www.trustedsec.com/ where you can also find a variety of presentations and tutorials.
+
+The toolkit is updated frequently and its functionality is constantly expanding. As of the time of this writing, the current version is version 7.0.6. This version supports the following attack vectors:
+
+●
+Spear-Phishing
+
+●
+Web Sites
+
+●
+Malicious USB/DVD/CDs
+
+●
+Arduino
+
+●
+Wireless Access Points
+
+●
+QRCodes
+
+●
+… and many others.
 ### 11. Sniffing and Spoofing
 #### Man-in-the-Middle Attacks
 #### ARP Spoofing
