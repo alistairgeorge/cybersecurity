@@ -395,6 +395,8 @@ The following sections should be included in the penetration testing report:
 #### Securing IoT Devices 
 ### 19. Legal and Compliance
 #### Computer Fraud and Abuse Act (CFAA)
+The Computer Fraud and Abuse Act (CFAA) of 1986 is United States legislation that imposes criminal penalties on individuals who intentionally access a protected computer without proper authorization or whose access exceeds their authorization. The law was enacted as an amendment to the Comprehensive Crime Control Act of 1984 to address growing concerns about computer hacking. Since its introduction, the CFAA has been amended multiple times, including a provision for civil liability.
+
 #### GDPR, HIPAA, PCI DSS 
 ### 20. Cybersecurity Tools
 #### Nmap, Wireshark, Burp Suite
