@@ -331,7 +331,7 @@ Penetration testing helps an organization discover vulnerabilities and flaws in 
 - External pen test - In an external test, the ethical hacker goes up against the company’s external-facing technology, such as their website and external network servers. In some cases, the hacker may not even be allowed to enter the company’s building. This can mean conducting the attack from a remote location or carrying out the test from a truck or van parked nearby.
 - Internal pen test - In an internal test, the ethical hacker performs the test from the company’s internal network. This kind of test is useful in determining how much damage a disgruntled employee can cause from behind the company’s firewall.
 #### Methodology
-1. Open-Source Security Testing Methodology Manual
+##### 1. Open-Source Security Testing Methodology Manual
  
 Open-Source Security Testing Methodology Manual (OSSTMM) is one of the most popular standards of penetration testing. This methodology is peer-reviewed for security testing and was created by the Institute for Security and Open Methodologies (ISECOM).
 
@@ -339,7 +339,7 @@ The method is based on a scientific approach to pen testing with accessible and 
 
 OSSTMM provides a framework for network penetration testing and vulnerability assessment for pen testing professionals. It is meant to be a framework for providers to find and resolve vulnerabilities, such as sensitive data and issues surrounding authentication.
 
-2. Open Web Application Security Project
+##### 2. Open Web Application Security Project
  
 OWASP, short for Open Web Application Security Project, is an open-source organization dedicated to web application security.
 
@@ -347,7 +347,7 @@ The non-profit organization’s goal is to make all its material free and easily
 
 The guide is divided into three parts: OWASP testing framework for web application development, web application testing methodology and reporting. The web application methodology can be used separately or as a part of the web testing framework for web application penetration testing, mobile application penetration testing, API penetration testing, and IoT penetration testing.
 
-3. Penetration Testing Execution Standard
+##### 3. Penetration Testing Execution Standard
  
 PTES, or Penetration Testing Execution Standard, is a comprehensive penetration testing method.
 
@@ -355,13 +355,13 @@ PTES was designed by a team of information security professionals and is made up
 
 The PTES aims to be the baseline for penetration tests and provide a standardized methodology for security professionals and organizations. The guide provides a range of resources, such as best practices in each stage of the penetration testing process, from start to finish. Some key features of PTES are exploitation and post exploitation. Exploitation refers to the process of gaining access to a system through penetration techniques such as social engineering and password cracking. Post exploitation is when data is extracted from a compromised system and access is maintained.
 
-4. Information System Security Assessment Framework
+##### 4. Information System Security Assessment Framework
  
 Information System Security Assessment Framework (ISSAF) is a pen testing framework supported by the Information Systems Security Group (OISSG).
 
 This methodology is no longer maintained and is likely not the best source for the most up-to-date information. However, one of its main strengths is that it links individual pen testing steps with specific pen testing tools. This type of format can be a good foundation for creating an individualized methodology.
 
-5. National Institute of Standards and Technology
+##### 5. National Institute of Standards and Technology
  
 NIST, short for the National Institute of Standards and Technology, is a cybersecurity framework that provides a set of pen testing standards for the federal government and outside organizations to follow. NIST is an agency within the U.S. Department of Commerce and should be considered the minimum standard to follow.
 
