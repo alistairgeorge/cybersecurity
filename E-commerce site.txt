@@ -1,0 +1,37 @@
+E-commerce site
+1. Use case diagram
+a.Customer
+Fns: Search, Filter, 
+View item, 
+Add item to cart,
+edit items,
+delete items, 
+checkout,
+pay,
+view orders, 
+edit orders, 
+delete orders,
+chat with Support,
+ask questions
+b.Supplier
+Adds items for sale,
+View, edit, delete items for sale
+View orders, 
+Add shipment details for orders,
+check payment for orders,
+respond to customer messages,
+c.Customer Support
+Reply to messages,
+act on behalf of a customer,
+view open tickets,
+respond to tickets,
+close tickets,
+d.Admin
+view statistics about customers, suppliers and customer support, 
+e.Logistics
+view orders placed,
+distribute orders to the specified location,
+track orders,
+update order status
+
+2. Class diagram

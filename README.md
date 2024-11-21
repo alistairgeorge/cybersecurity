@@ -301,17 +301,85 @@ Here are some common risks of DNS poisoning and spoofing:
 - Halted security updates: If spoofed sites include internet security providers, legitimate security updates will not be performed. As a result, your computer may be exposed to additional threats such as viruses or Trojans.
 - Censorship: Censorship is a risk that is actually commonplace in some parts of the world. For example, China uses modifications to the DNS to ensure all websites viewed within the country are approved. This nation-level block, dubbed the “Great Firewall”, is one example of how powerful DNS spoofing can be.
 ### 12. Malware Analysis
+Malware Analysis is the study or process of determining the functionality, origin and potential impact of a given malware sample and extracting as much information from it. The information that is extracted helps to understand the functionality and scope of malware, how the system was infected and how to defend against similar attacks in future.
 #### Types of Malware
+Various types of Malware are:
+
+- Trojans – Trojans can destroy data and exfiltrate data and can also be used for spying.
+- Rat’s – This type of malware allows attacker to remotely access and execute commands on system.
+- Ransomware – Ransomware encrypts all files on the system and holds the System and its data for ransom.
+- Dropper – Droppers functionality is to download/drop additional malware.
 #### Sandbox Analysis
+A sandbox is a system for malware detection that runs a suspicious object in a virtual machine (VM) with a fully-featured OS and detects the object’s malicious activity by analyzing its behavior. If the object performs malicious actions in a VM, the sandbox detects it as malware. VMs are isolated from the real business infrastructure.
+
+Sandboxes analyze the behavior of an object as it executes, which makes them effective against malware that escapes static analysis. At the same time, compared to other behavior analysis designs, a sandbox is safer as it doesn’t risk running a suspicious object in the real business infrastructure.
 #### Signature-Based and Behavior-Based Detection 
 ### 13. Incident Response and Handling
 #### Incident Response Process
 #### Digital Forensics
 #### Chain of Custody 
 ### 14. Penetration Testing
+Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system’s defenses which attackers could take advantage of.
+
+This is like a bank hiring someone to dress as a burglar and try to break into their building and gain access to the vault. If the ‘burglar’ succeeds and gets into the bank or the vault, the bank will gain valuable information on how they need to tighten their security measures.
+
+Penetration testing helps an organization discover vulnerabilities and flaws in their systems that they might not have otherwise been able to find. This can help stop attacks before they start, as organizations can fix these vulnerabilities once they have been identified.
 #### Types of Penetration Testing
+- Open-box pen test - In an open-box test, the hacker will be provided with some information ahead of time regarding the target company’s security info.
+- Closed-box pen test - Also known as a ‘single-blind’ test, this is one where the hacker is given no background information besides the name of the target company.
+- Covert pen test - Also known as a ‘double-blind’ pen test, this is a situation where almost no one in the company is aware that the pen test is happening, including the IT and security professionals who will be responding to the attack. For covert tests, it is especially important for the hacker to have the scope and other details of the test in writing beforehand to avoid any problems with law enforcement.
+- External pen test - In an external test, the ethical hacker goes up against the company’s external-facing technology, such as their website and external network servers. In some cases, the hacker may not even be allowed to enter the company’s building. This can mean conducting the attack from a remote location or carrying out the test from a truck or van parked nearby.
+- Internal pen test - In an internal test, the ethical hacker performs the test from the company’s internal network. This kind of test is useful in determining how much damage a disgruntled employee can cause from behind the company’s firewall.
 #### Methodology
+1. Open-Source Security Testing Methodology Manual
+ 
+Open-Source Security Testing Methodology Manual (OSSTMM) is one of the most popular standards of penetration testing. This methodology is peer-reviewed for security testing and was created by the Institute for Security and Open Methodologies (ISECOM).
+
+The method is based on a scientific approach to pen testing with accessible and adaptable guides for testers. The OSSTMM includes key features, such as an operational focus, channel testing, metrics and trust analysis in its methodology.
+
+OSSTMM provides a framework for network penetration testing and vulnerability assessment for pen testing professionals. It is meant to be a framework for providers to find and resolve vulnerabilities, such as sensitive data and issues surrounding authentication.
+
+2. Open Web Application Security Project
+ 
+OWASP, short for Open Web Application Security Project, is an open-source organization dedicated to web application security.
+
+The non-profit organization’s goal is to make all its material free and easily accessible for anyone who wants to improve their own web application security. OWASP has its own Top 10 (link resides outside of ibm.com), which is a well-maintained report outlining the biggest security concerns and risks to web applications, such as cross-site scripting, broken authentication and getting behind a firewall. OWASP uses the top 10 list as a basis for its OWASP Testing Guide. 
+
+The guide is divided into three parts: OWASP testing framework for web application development, web application testing methodology and reporting. The web application methodology can be used separately or as a part of the web testing framework for web application penetration testing, mobile application penetration testing, API penetration testing, and IoT penetration testing.
+
+3. Penetration Testing Execution Standard
+ 
+PTES, or Penetration Testing Execution Standard, is a comprehensive penetration testing method.
+
+PTES was designed by a team of information security professionals and is made up of seven main sections covering all aspects of pen testing. The purpose of PTES is to have technical guidelines to outline what organizations should expect from a penetration test and guide them throughout the process, starting at the pre-engagement stage.
+
+The PTES aims to be the baseline for penetration tests and provide a standardized methodology for security professionals and organizations. The guide provides a range of resources, such as best practices in each stage of the penetration testing process, from start to finish. Some key features of PTES are exploitation and post exploitation. Exploitation refers to the process of gaining access to a system through penetration techniques such as social engineering and password cracking. Post exploitation is when data is extracted from a compromised system and access is maintained.
+
+4. Information System Security Assessment Framework
+ 
+Information System Security Assessment Framework (ISSAF) is a pen testing framework supported by the Information Systems Security Group (OISSG).
+
+This methodology is no longer maintained and is likely not the best source for the most up-to-date information. However, one of its main strengths is that it links individual pen testing steps with specific pen testing tools. This type of format can be a good foundation for creating an individualized methodology.
+
+5. National Institute of Standards and Technology
+ 
+NIST, short for the National Institute of Standards and Technology, is a cybersecurity framework that provides a set of pen testing standards for the federal government and outside organizations to follow. NIST is an agency within the U.S. Department of Commerce and should be considered the minimum standard to follow.
+
+NIST penetration testing aligns with the guidance sent by NIST. To comply with such guidance, organizations must perform penetration tests following the pre-determined set of guidelines.
 #### Reporting 
+A penetration test report provides a comprehensive summary of the system’s vulnerabilities. In addition, it includes recommendations for patching, hardening, and restricting the functionality of systems when necessary. The objective is to identify problem areas and implement a solution.  
+
+Consider the following elements prior to writing a pentest report: 
+
+- Specify the objectives of penetration testing
+- Understand the plausible effects of a breach
+- Describe the assessment procedure and any pertinent techniques
+
+The following sections should be included in the penetration testing report:
+
+- Executive summary – The pentesting report should begin with a summary of your findings geared towards company executives. This should be written in non-technical language so that non-security professionals can comprehend the significance of the discovered vulnerabilities and what the organisation must do to fix them.
+- Details of discovered vulnerabilities – Describe the vulnerabilities discovered, how they were discovered, and how an adversary can exploit them. Testers need to keep it concise and, if possible, use language that security professionals, developers, and non-technical roles can comprehend.
+- Impact on the business – Now that it is evident which vulnerabilities exist, testers must analyse their effect on the business. It is best to use the Common Vulnerability Scoring System (CVSS) to rank the severity of the vulnerabilities, and explain which critical systems each vulnerability affects. It is also best to provide a technical walkthrough of the impact if the vulnerability is exploited on the specific organization. 
 ### 15. Cryptography
 #### Symmetric and Asymmetric Encryption
 #### Hashing Algorithms
