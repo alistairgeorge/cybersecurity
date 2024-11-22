@@ -316,8 +316,29 @@ Sandboxes analyze the behavior of an object as it executes, which makes them eff
 #### Signature-Based and Behavior-Based Detection 
 ### 13. Incident Response and Handling
 #### Incident Response Process
+Incident response (sometimes called cybersecurity incident response) refers to an organization’s processes and technologies for detecting and responding to cyberthreats, security breaches or cyberattacks. A formal incident response plan enables cybersecurity teams to limit or prevent damage.
+
+The goal of incident response is to prevent cyberattacks before they happen and minimize the cost and business disruption resulting from any cyberattacks that occur. Incident response is the technical portion of incident management, which also includes executive, HR and legal management of a serious incident.
 #### Digital Forensics
+Digital forensics is the process of collecting and analyzing digital evidence in a way that maintains its integrity and admissibility in court.
+
+Digital forensics is a field of forensic science. It is used to investigate cybercrimes but can also help with criminal and civil investigations. For instance, cybersecurity teams may use digital forensics to identify the cybercriminals behind a malware attack, while law enforcement agencies may use it to analyze data from the devices of a murder suspect.
+
+Digital forensics has broad applications because it treats digital evidence like any other form of evidence. Just as officials use specific processes to gather physical evidence from a crime scene, digital forensics investigators follow a strict forensics process (also known as a chain of custody) when handling digital evidence to avoid tampering.
 #### Chain of Custody 
+Chain of Custody refers to the logical sequence that records the sequence of custody, control, transfer, analysis and disposition of physical or electronic evidence in legal cases. Each step in the chain is essential as if broke, the evidence may be rendered inadmissible. Thus we can say that preserving the chain of custody is about following the correct and consistent procedure and hence ensuring the quality of evidence.
+Let’s discuss each stage of the chain of custody in detail:
+
+- Data Collection: This is where chain of custody process is initiated. It involves identification, labeling, recording, and the acquisition of data from all the possible relevant sources that preserve the integrity of the data and evidence collected.
+- Examination: During this process, the chain of custody information is documented outlining the forensic process undertaken. It is important to capture screenshots throughout the process to show the tasks that are completed and the evidence uncovered.
+- Analysis: This stage is the result of the examination stage. In the Analysis stage, legally justifiable methods and techniques are used to derive useful information to address questions posed in the particular case.
+- Reporting: This is the documentation phase of the Examination and Analysis stage. Reporting includes the following:
+  - Statement regarding Chain of Custody.
+  - Explanation of the various tools used.
+  - A description of the analysis of various data sources.
+  - Issues identified.
+  - Vulnerabilities identified.
+Recommendation for additional forensics measures that can be taken.
 ### 14. Penetration Testing
 Penetration testing (or pen testing) is a security exercise where a cyber-security expert attempts to find and exploit vulnerabilities in a computer system. The purpose of this simulated attack is to identify any weak spots in a system’s defenses which attackers could take advantage of.
 
@@ -396,7 +417,6 @@ The following sections should be included in the penetration testing report:
 ### 19. Legal and Compliance
 #### Computer Fraud and Abuse Act (CFAA)
 The Computer Fraud and Abuse Act (CFAA) of 1986 is United States legislation that imposes criminal penalties on individuals who intentionally access a protected computer without proper authorization or whose access exceeds their authorization. The law was enacted as an amendment to the Comprehensive Crime Control Act of 1984 to address growing concerns about computer hacking. Since its introduction, the CFAA has been amended multiple times, including a provision for civil liability.
-
 #### GDPR, HIPAA, PCI DSS 
 ### 20. Cybersecurity Tools
 #### Nmap, Wireshark, Burp Suite
