@@ -121,6 +121,7 @@ The Linux OS is an open source operating system project that is a freely distrib
 - BASH is the Linux interpreter program which can be used to execute commands.
 - Linux provides multiple levels of file structures i.e. hierarchical structure in which all the files required by the system and those that are created by the user are arranged.
 - Linux provides user security using authentication features and also threat detection and solution is very fast because Linux is mainly community driven.
+  
 **Drawbacks:**
 - There’s no standard edition of Linux hence confusing for users and also becoming familiar with the Linux may be a problem for new users.
 - More difficult to find applications to support user needs since Linux does not dominate the market.
@@ -136,6 +137,7 @@ Windows is an operating system designed by Microsoft to be used on a standard x8
 - Windows has a very large user base so there is a much larger selection of available software programs, utilities.
 - Windows is backward compatible meaning old programs can run on newer versions.
 - Hardware is automatically detected eliminating need of manually installing any device drivers.
+  
 **Drawbacks**
 - Windows can be expensive since the OS is paid license and majority of its applications are paid products.
 - Windows has high computer resource requirement like it should have high ram capacity, a lot of hard drive space and good graphics card.
@@ -145,11 +147,13 @@ Windows is an operating system designed by Microsoft to be used on a standard x8
 
 #### macOS
 MacOS is a proprietary, Unix-based operating system developed by Apple Inc. It is the primary operating system for Apple’s Mac computers and laptops. It was first introduced in 2001 as Mac OS X, and was later renamed to macOS in 2016.
+
 **Features**
 - User-friendly interface: macOS has a clean and intuitive graphical user interface, making it easy to use for both beginners and advanced users.
 - Integration with Apple’s ecosystem: macOS integrates well with Apple’s other products, such as the iPhone, iPad, and Apple Watch, allowing for seamless connectivity and data transfer between devices.
 - Built-in applications: macOS comes with a range of built-in applications, such as iMessage, FaceTime, and Safari, making it possible to perform a wide range of tasks without having to install additional software.
 - High-quality software: Apple is known for its focus on quality, and macOS is no exception. The operating system includes high-quality applications and is known for its stability and reliability.
+  
 **Drawbacks**
 - Price: macOS is a proprietary operating system, and Mac computers are typically more expensive than other types of computers.
 - Limited hardware compatibility: Because macOS is only available on Apple’s Mac computers and laptops, users are limited in terms of hardware compatibility, especially when compared to other operating systems like Windows or Linux.
