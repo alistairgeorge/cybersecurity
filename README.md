@@ -160,6 +160,10 @@ MacOS is a proprietary, Unix-based operating system developed by Apple Inc. It i
 - Proprietary software: Many of the applications and software available for macOS are proprietary and only available from Apple’s App Store, which can limit user choice and flexibility.
 - Lack of customization: Unlike other operating systems, such as Linux, macOS has limited customization options, making it less flexible for advanced users who want to change the look and feel of their operating system.
 #### Command Line Basics 
+ A command is an instruction given to a computer or any software that requests fulfillment of a certain activity. This can range from simple actions, like file opening, to rather complex ones, such as the configuration of networking settings.
+A shell is a program that acts as command-line interpreter. It processes commands and outputs the results. It interprets and processes the commands entered by the user.
+The CLI is the interface in which we enter commands for the computer to process. It's the space in which you enter the commands the computer will process.
+
 ### 4. Cybersecurity Fundamentals
 #### Encryption
 
