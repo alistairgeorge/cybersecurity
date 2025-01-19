@@ -110,9 +110,51 @@ Dynamic Host Configuration Protocol is a network protocol used to automate the p
 
 This makes it easier to manage and maintain large networks, ensuring devices can communicate effectively without conflicts in their network settings. DHCP plays a crucial role in modern networks by simplifying the process of connecting devices and managing network resources efficiently.
 ### 3. Operating Systems
+An Operating System(OS) is a software that manages and handles hardware and software resources of a computing device. An operating system is an interface between the user and the hardware. It is a program that helps to utilize system hardware so it is also known as a resource manager. There are different types of operating systems based on different system architectures. , each with its own features and uses.
 #### Linux
+The Linux OS is an open source operating system project that is a freely distributed, cross-platform operating system developed based on UNIX. This operating system is developed by Linus Torvalds. The name Linux comes from the Linux kernel. It is basically the system software on a computer that allows apps and users to perform some specific task on the computer. The development of Linux operating system pioneered the open source development and became the symbol of software collaboration.
+
+**Features:**
+- Linux is free can be downloaded from the Internet or redistribute it under GNU licenses and has the best community support.
+- Linux OS is easily portable which means it can be installed on various types of devices like mobile, tablet computers.
+- It is a multi-user, multitasking operating system.
+- BASH is the Linux interpreter program which can be used to execute commands.
+- Linux provides multiple levels of file structures i.e. hierarchical structure in which all the files required by the system and those that are created by the user are arranged.
+- Linux provides user security using authentication features and also threat detection and solution is very fast because Linux is mainly community driven.
+**Drawbacks:**
+- There’s no standard edition of Linux hence confusing for users and also becoming familiar with the Linux may be a problem for new users.
+- More difficult to find applications to support user needs since Linux does not dominate the market.
+- Since some applications are developed specifically for Windows and Mac, those might not be compatible with linux and sometimes users might not have much of a choice to choose between different applications like in Windows or Mac since most apps are developed for operating systems that have a huge user base.
+- Some hardware may not be incompatible with Linux since it has patchier support for drivers which may result in malfunction.
+- There are plenty of forums to resolve Linux issues, but it may not always match the user’s own level of technical understanding.
 #### Windows
+Windows is an operating system designed by Microsoft to be used on a standard x86 Intel and AMD processors. It provides an interface, known as a graphical user interface(GUI) which eliminates the need to memorize commands for the command line by using a mouse to navigate through menus, dialog boxes, buttons, tabs, and icons. The operating system was named windows since the programs are displayed in the shape of a square. This Windows operating system has been designed for both a novice user just using at home as well as for professionals who are into development. 
+**Features**
+- It is designed to run on any standard x86 Intel and AMD hence most of the hardware vendors make drivers for windows like Dell, HP, etc.
+- It supports enhanced performance by utilizing multi-core processors.
+- It comes preloaded with many productivity tools which helps to complete all types of everyday tasks on your computer.
+- Windows has a very large user base so there is a much larger selection of available software programs, utilities.
+- Windows is backward compatible meaning old programs can run on newer versions.
+- Hardware is automatically detected eliminating need of manually installing any device drivers.
+**Drawbacks**
+- Windows can be expensive since the OS is paid license and majority of its applications are paid products.
+- Windows has high computer resource requirement like it should have high ram capacity, a lot of hard drive space and good graphics card.
+- Windows slows and hangs up if the user loads up many programs at the same time.
+- Windows includes network sharing that can be useful if user has a network with many PCs.
+- Windows is vulnerable to virus attacks since it has a huge user base and users have to update OS to keep up-to-date with security patches.
+
 #### macOS
+MacOS is a proprietary, Unix-based operating system developed by Apple Inc. It is the primary operating system for Apple’s Mac computers and laptops. It was first introduced in 2001 as Mac OS X, and was later renamed to macOS in 2016.
+**Features**
+- User-friendly interface: macOS has a clean and intuitive graphical user interface, making it easy to use for both beginners and advanced users.
+- Integration with Apple’s ecosystem: macOS integrates well with Apple’s other products, such as the iPhone, iPad, and Apple Watch, allowing for seamless connectivity and data transfer between devices.
+- Built-in applications: macOS comes with a range of built-in applications, such as iMessage, FaceTime, and Safari, making it possible to perform a wide range of tasks without having to install additional software.
+- High-quality software: Apple is known for its focus on quality, and macOS is no exception. The operating system includes high-quality applications and is known for its stability and reliability.
+**Drawbacks**
+- Price: macOS is a proprietary operating system, and Mac computers are typically more expensive than other types of computers.
+- Limited hardware compatibility: Because macOS is only available on Apple’s Mac computers and laptops, users are limited in terms of hardware compatibility, especially when compared to other operating systems like Windows or Linux.
+- Proprietary software: Many of the applications and software available for macOS are proprietary and only available from Apple’s App Store, which can limit user choice and flexibility.
+- Lack of customization: Unlike other operating systems, such as Linux, macOS has limited customization options, making it less flexible for advanced users who want to change the look and feel of their operating system.
 #### Command Line Basics 
 ### 4. Cybersecurity Fundamentals
 #### Encryption
