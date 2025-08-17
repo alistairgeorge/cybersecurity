@@ -452,12 +452,34 @@ The following sections should be included in the penetration testing report:
 - Details of discovered vulnerabilities – Describe the vulnerabilities discovered, how they were discovered, and how an adversary can exploit them. Testers need to keep it concise and, if possible, use language that security professionals, developers, and non-technical roles can comprehend.
 - Impact on the business – Now that it is evident which vulnerabilities exist, testers must analyse their effect on the business. It is best to use the Common Vulnerability Scoring System (CVSS) to rank the severity of the vulnerabilities, and explain which critical systems each vulnerability affects. It is also best to provide a technical walkthrough of the impact if the vulnerability is exploited on the specific organization. 
 ### 15. Cryptography
+Cryptography is a technique of securing information and communications using codes to ensure confidentiality, integrity and authentication. Thus, preventing unauthorized access to information. The prefix "crypt" means "hidden" and the suffix "graphy" means "writing". In Cryptography, the techniques that are used to protect information are obtained from mathematical concepts and a set of rule-based calculations known as algorithms to convert messages in ways that make it hard to decode them.
+
+These algorithms are used for cryptographic key generation, digital signing, and verification to protect data privacy, web browsing on the internet and to protect confidential transactions such as credit card and debit card transactions.
 #### Symmetric and Asymmetric Encryption
+Symmetric Key Cryptography is an encryption system where the sender and receiver of a message use a single common key to encrypt and decrypt messages. Symmetric Key cryptography is faster and simpler but the problem is that the sender and receiver have to somehow exchange keys securely. The most popular symmetric key cryptography systems are Data Encryption Systems (DES) and Advanced Encryption Systems (AES) .
+
+In Asymmetric Key Cryptography a pair of keys is used to encrypt and decrypt information. A sender's public key is used for encryption and a receiver's private key is used for decryption. Public keys and Private keys are different. Even if the public key is known by everyone the intended receiver can only decode it because he holds his private key. The most popular asymmetric key cryptography algorithm is the RSA algorithm.
 #### Hashing Algorithms
+Hashing algorithms generate a fixed-length output (hash) from an input, regardless of its size. These hashes are irreversible, making them ideal for storing and verifying passwords. Strong hashing algorithms such as SHA-256 or bcrypt help ensure security, while weak or outdated algorithms like MD5 and SHA-1 are vulnerable to collision attacks and should be avoided.
+
 #### Digital Signatures 
 ### 16. Mobile Hacking
+Mobile devices concentrate personal and enterprise data, making them attractive targets for adversaries. Attackers exploit weaknesses across the stack, from baseband and OS kernels to app code, permissions, and backend APIs. The mobility and constant connectivity of phones broaden the attack surface through public Wi-Fi, Bluetooth, NFC, and cellular networks. Effective defense requires secure OS baselines, hardened apps, vigilant update practices, and user awareness.
+
 #### Android and iOS Security
+Android and iOS follow different security models but share common goals of isolation, least privilege, and cryptographic protection. Android’s openness and ecosystem diversity enable rapid innovation but also increase variability in patch levels and app sources. iOS enforces a tightly controlled ecosystem with code signing and sandboxing, which reduces some risks but does not eliminate jailbreak or zero-day threats. Across both platforms, timely updates, secure boot, and hardware-backed key storage are essential countermeasures.
+
+- **Android specifics** include per-app sandboxes, scoped storage, and Play Protect, yet sideloading and OEM update lag can expose users to malware and outdated components.  
+- **iOS specifics** include strict code signing, entitlements, and hardware-backed Enclave keys, though high-value targets still face sophisticated exploitation chains.  
+- **Common exposure points** such as insecure device lock policies, weak MDM configurations, and risky public Wi-Fi usage are frequent footholds for attackers.
+
 #### Mobile Application Security 
+Apps routinely handle credentials, tokens, and PII, so flaws directly translate to account takeover and data loss. Typical weaknesses include insecure data storage, insufficient transport security, weak authentication flows, and vulnerable API integrations. Defenders should apply the OWASP Mobile Top 10 guidance, threat-model offline and adversarial settings, and instrument CI/CD with security tests. Runtime protections like certificate pinning, jailbreak/root detection, and secure keystore usage raise the bar for reverse engineering and tampering.
+
+- **Insecure storage** (e.g., plaintext in SharedPreferences/Keychain) allows easy extraction on lost or compromised devices. Use platform keystores and encryption at rest.  
+- **Insecure communication** (e.g., missing TLS validation) enables MITM attacks; enforce TLS 1.2+ and consider certificate pinning with safe fallback.  
+- **Weak auth/session handling** (e.g., long-lived tokens) invites token theft and replay; implement short-lived tokens and refresh with device binding.
+
 ### 17. Cloud Security
 #### AWS, Azure, Google Cloud
 #### Security Best Practices 
@@ -473,5 +495,21 @@ The Computer Fraud and Abuse Act (CFAA) of 1986 is United States legislation tha
 #### Snort, Nessus, Aircrack-ng 
 ### 21. Career Path and Certifications
 #### Certified Ethical Hacker (CEH)
+CEH validates knowledge of attacker tooling, TTPs, and the ethical frameworks governing authorized testing. The curriculum surveys reconnaissance, enumeration, exploitation, post-exploitation, and reporting with a broad, tool-centric lens. It is often used as an entry-level benchmark for roles that need shared vocabulary and awareness of common attack paths. While not deeply hands-on, it can open doors to junior red team and assessment positions.
+
+- **Who it’s for:** New practitioners seeking a structured overview of offensive security concepts and tooling.  
+- **Strengths:** Broad syllabus, strong industry recognition in HR filters, and accessible preparation paths.  
+- **Considerations:** Follow with a lab-heavy cert or portfolio to demonstrate practical capability.
+
 #### Offensive Security Certified Professional (OSCP)
+OSCP is a rigorous, hands-on certification emphasizing methodology, persistence, and real exploitation. The exam requires compromising multiple hosts within a timed window and producing a professional report, mirroring client engagements. Candidates develop enumeration depth, lateral movement, and privilege escalation skills under pressure. Employers value OSCP because it demonstrates problem-solving and execution, not only theory.
+
+- **Who it’s for:** Aspiring pentesters and red teamers ready for sustained lab practice and structured methodology.  
+- **Strengths:** Strong practical focus, respected signal of capability, and report-writing requirement.  
+- **Considerations:** Preparation demands significant time; breadth beyond the syllabus (e.g., AD, cloud) still needs separate study.
 #### CISSP, CompTIA Security+
+CISSP targets experienced professionals designing and governing enterprise security programs. It spans risk, architecture, engineering, software security, and operations, aligning with leadership and design responsibilities. Security+ provides a vendor-neutral foundation across threats, controls, crypto, and incident response for newcomers. Together, they bookend an education path from fundamentals to strategic leadership.
+
+- **CISSP strengths:** Management credibility, broad domain coverage, and alignment with senior roles and compliance requirements.  
+- **Security+ strengths:** Solid baseline for SOC, IT, and junior security roles; common prerequisite in hiring pipelines.  
+- **Path tip:** Pair Security+ with hands-on labs and an intermediate, practical cert (e.g., eJPT, PNPT) before pursuing advanced tracks.
