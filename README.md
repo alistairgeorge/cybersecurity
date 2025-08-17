@@ -456,13 +456,25 @@ Cryptography is a technique of securing information and communications using cod
 
 These algorithms are used for cryptographic key generation, digital signing, and verification to protect data privacy, web browsing on the internet and to protect confidential transactions such as credit card and debit card transactions.
 #### Symmetric and Asymmetric Encryption
-Symmetric Key Cryptography is an encryption system where the sender and receiver of a message use a single common key to encrypt and decrypt messages. Symmetric Key cryptography is faster and simpler but the problem is that the sender and receiver have to somehow exchange keys securely. The most popular symmetric key cryptography systems are Data Encryption Systems (DES) and Advanced Encryption Systems (AES) .
+Encryption approaches are broadly divided into symmetric and asymmetric methods, each solving different problems. Symmetric encryption uses one shared secret key for both encryption and decryption, which makes it extremely fast and suitable for large data volumes. Asymmetric encryption uses two related keys—a public key for encryption and a private key for decryption—so parties can exchange secrets without first meeting to share a key. In real systems, the two approaches are commonly combined: asymmetric cryptography establishes trust and key material, and symmetric ciphers handle the heavy lifting for performance.
 
-In Asymmetric Key Cryptography a pair of keys is used to encrypt and decrypt information. A sender's public key is used for encryption and a receiver's private key is used for decryption. Public keys and Private keys are different. Even if the public key is known by everyone the intended receiver can only decode it because he holds his private key. The most popular asymmetric key cryptography algorithm is the RSA algorithm.
+- **Symmetric encryption (e.g., AES-GCM, ChaCha20-Poly1305)** is preferred for bulk data because it is computationally efficient and widely hardware-accelerated. It does, however, require secure key distribution and rotation policies to prevent key compromise from undermining all protected data.  
+- **Asymmetric encryption (e.g., RSA, ECC)** enables secure key exchange and identity verification over untrusted networks. It is slower than symmetric crypto, so it is typically limited to establishing session keys, verifying signatures, and bootstrapping trust.  
+- **Hybrid usage (e.g., TLS handshakes)** leverages asymmetric algorithms to authenticate endpoints and share a temporary symmetric key, after which high-speed symmetric ciphers encrypt the session traffic.
+
 #### Hashing Algorithms
-Hashing algorithms generate a fixed-length output (hash) from an input, regardless of its size. These hashes are irreversible, making them ideal for storing and verifying passwords. Strong hashing algorithms such as SHA-256 or bcrypt help ensure security, while weak or outdated algorithms like MD5 and SHA-1 are vulnerable to collision attacks and should be avoided.
+Hashing converts input data into a fixed-length digest such that any small change in the input causes a significant, unpredictable change in the output. Because secure hashes are one-way functions, they are ideal for integrity checks, digital signatures, and password storage (with proper salting and stretching). Modern designs emphasize collision resistance, preimage resistance, and performance under realistic workloads. Weak or broken hashes undermine entire systems by enabling file tampering and password cracking.
+
+- **SHA-256 / SHA-3** are widely trusted for integrity verification and are used in code signing, blockchain components, and checksums for downloads. They provide strong collision resistance when implemented correctly.  
+- **bcrypt, scrypt, and Argon2** are password-hashing functions designed to be slow and memory-hard, which significantly raises the cost of brute-force attacks against stolen password databases.  
+- **MD5 and SHA-1** are considered broken for collision resistance and should not be used for new systems. Legacy uses should be migrated to stronger algorithms with salting and iteration strategies.
+
 
 #### Digital Signatures 
+- **Code signing (e.g., package managers, OS updates)** ensures binaries and scripts have not been tampered with, preventing malware from masquerading as legitimate software.  
+- **Document and email signing (e.g., PDF signatures, S/MIME)** provides legal assurance and auditability for business workflows and regulated industries.  
+- **PKI and certificates (e.g., TLS certificates)** bind public keys to identities so browsers and clients can verify they are talking to the right server.
+
 ### 16. Mobile Hacking
 Mobile devices concentrate personal and enterprise data, making them attractive targets for adversaries. Attackers exploit weaknesses across the stack, from baseband and OS kernels to app code, permissions, and backend APIs. The mobility and constant connectivity of phones broaden the attack surface through public Wi-Fi, Bluetooth, NFC, and cellular networks. Effective defense requires secure OS baselines, hardened apps, vigilant update practices, and user awareness.
 
@@ -481,19 +493,91 @@ Apps routinely handle credentials, tokens, and PII, so flaws directly translate 
 - **Weak auth/session handling** (e.g., long-lived tokens) invites token theft and replay; implement short-lived tokens and refresh with device binding.
 
 ### 17. Cloud Security
+Cloud adoption accelerates delivery but shifts the threat model to internet-exposed control planes and highly automated infrastructure. The “shared responsibility” model means providers secure the underlying cloud, while customers must secure identities, configurations, data, and workloads. Most breaches stem from misconfigurations, overly permissive IAM, and exposed secrets—not from provider failures. Strong governance, automated guardrails, and continuous monitoring are the bedrock of secure cloud operations.
+
 #### AWS, Azure, Google Cloud
+Each major platform ships robust native controls, but outcomes depend on how organizations deploy and monitor them. Understanding provider-specific services and defaults helps teams avoid common pitfalls like public storage and unmanaged keys. Mapping controls to your threat model and compliance needs ensures you use the right feature for the job. Cross-cloud concepts remain similar even when service names differ.
+
+- **AWS** offers IAM with fine-grained policies, KMS for key management, CloudTrail/CloudWatch for logging, and GuardDuty/Inspector for threat and posture insights. Properly scoping IAM roles and denying public S3 access by default prevent common leaks.  
+- **Azure** provides Entra ID (formerly Azure AD) for identity, Key Vault for secrets, Defender for Cloud for posture, and Sentinel for SIEM/SOAR. Resource locks and policies help enforce least privilege and baseline configurations.  
+- **Google Cloud** features Cloud IAM, Cloud KMS, Security Command Center, and VPC Service Controls to constrain data exfiltration paths. Organizational policies and workload identity federation reduce reliance on long-lived keys.
+
 #### Security Best Practices 
+Solid cloud hygiene blends identity controls, encryption, network boundaries, and automated detection. Enforce strong authentication, minimize standing privileges, and prefer short-lived credentials via federation. Treat infrastructure as code to review, test, and version security-critical changes. Continuous validation through CSPM, attack path analysis, and red/blue exercises keeps controls aligned with evolving architectures.
+
+- **MFA everywhere** (especially on root/owner accounts) eliminates trivial account takeovers that cascade into full environment compromise.  
+- **Least privilege IAM** with role-based access, permission boundaries, and periodic access reviews reduces blast radius.  
+- **Encryption by default** for data at rest and in transit, plus managed key lifecycles, protects against data exposure if storage or backups are copied.  
+- **Network segmentation** with private subnets, service endpoints, and zero-trust access limits lateral movement opportunities.  
+- **Logging and monitoring** via native services streamed to a central SIEM enables rapid detection and response.  
+- **Secret management** using managed vaults and workload identity removes hard-coded keys from code and images.
+
 ### 18. IoT Security
+IoT expands the attack surface from desktops and servers to millions of small, often unattended devices. Constraints on cost, power, and compute can push security to the sidelines, resulting in weak defaults and infrequent updates. Compromise of a single device can expose private data, provide a foothold into internal networks, or conscript devices into botnets. A defensible IoT program begins with secure design, strict onboarding, and lifecycle patchability.
+
 #### Internet of Things Risks
+IoT deployments span consumer, medical, industrial, and critical infrastructure contexts, each with unique risk profiles. Default credentials, legacy stacks, and unauthenticated services are still common in the field. Many protocols prioritize interoperability over security, allowing sniffing, replay, or injection if not wrapped in strong transport protections. Physical access, supply-chain tampering, and insecure mobile companion apps add to the threat landscape.
+
+- **Default or hard-coded passwords** allow mass scanning and instant takeover; credential rotation and unique per-device secrets are mandatory.  
+- **Unpatched firmware** leaves known CVEs exploitable for years; devices must support secure, signed, and preferably automatic updates.  
+- **Insecure protocols** (e.g., MQTT without TLS) expose telemetry and command channels; wrap with TLS and authenticate clients.  
+- **Flat networks** let compromised devices pivot; segmentation and firewalling constrain blast radius and lateral movement.
+
 #### Securing IoT Devices 
+A practical defense strategy balances device, network, and backend hardening. Devices need secure boot, signed firmware, and hardware-backed key storage where feasible. Networks should isolate IoT from corporate and sensitive segments while enforcing least-privilege egress. Backends must authenticate devices, validate payloads, and monitor behavior for drift from expected baselines.
+
+- **Change defaults and disable unused services** to remove trivial attack paths and reduce exposed surface area.  
+- **Implement secure update pipelines** with signed images, rollback protections, and audit trails to maintain trust through the lifecycle.  
+- **Segment and monitor** with VLANs/VPCs, deny-by-default ACLs, and anomaly detection tuned to device behavior patterns.  
+- **Adopt secure provisioning** to bind device identities at manufacture or first boot, avoiding shared secrets at scale.
+
 ### 19. Legal and Compliance
+Regulatory frameworks translate privacy and security expectations into enforceable requirements. They standardize baseline controls, mandate breach reporting, and define consumer rights over personal data. Non-compliance can result in heavy fines, litigation, and lasting reputational damage. Security programs should map technical controls and processes to the applicable frameworks from day one.
+
 #### Computer Fraud and Abuse Act (CFAA)
 The Computer Fraud and Abuse Act (CFAA) of 1986 is United States legislation that imposes criminal penalties on individuals who intentionally access a protected computer without proper authorization or whose access exceeds their authorization. The law was enacted as an amendment to the Comprehensive Crime Control Act of 1984 to address growing concerns about computer hacking. Since its introduction, the CFAA has been amended multiple times, including a provision for civil liability.
 #### GDPR, HIPAA, PCI DSS 
+### GDPR
+GDPR protects personal data of EU residents and applies globally to organizations that process such data. It requires lawful bases for processing, data minimization, transparency, and rights such as access, rectification, and erasure. Controllers and processors must implement “privacy by design and by default,” maintain records, and report qualifying breaches within 72 hours. Significant penalties—up to 4% of global annual turnover—encourage rigorous compliance.
+
+- **Data subject rights** obligate organizations to honor access, portability, and deletion requests within defined timelines.  
+- **DPIAs (impact assessments)** are required for high-risk processing to evaluate and mitigate privacy risks before launch.  
+- **Cross-border transfers** must rely on approved mechanisms, such as standard contractual clauses or adequacy decisions.
+
+### HIPAA
+HIPAA governs the protection of Protected Health Information (PHI) across covered entities and their business associates in the U.S. The Privacy Rule sets limits on uses and disclosures, while the Security Rule requires administrative, physical, and technical safeguards. Organizations must conduct risk analyses, train staff, and maintain audit controls to protect PHI. Breach Notification Rules mandate disclosure to affected individuals and regulators.
+
+- **Access controls and audit logs** ensure only authorized personnel view PHI and all access is traceable.  
+- **Transmission security** requires encryption and integrity controls for PHI sent over networks.  
+- **Business Associate Agreements** extend obligations to partners handling PHI on behalf of covered entities.
+
+### PCI DSS
+PCI DSS secures payment card data for merchants, processors, and service providers. It prescribes network segmentation, strong authentication, encryption, logging, and regular vulnerability management. Compliance is validated through SAQs or QSA-led assessments depending on transaction volume and architecture. Continuous adherence—not one-time certification—is necessary to reduce fraud risk.
+
+- **Scope reduction** via tokenization and segmentation limits where card data can flow and be stored.  
+- **Vulnerability management** mandates periodic scans, penetration tests, and prompt patching of identified risks.  
+- **Access control and monitoring** enforce least privilege and provide forensics-ready logs across the cardholder data environment.
+
 ### 20. Cybersecurity Tools
+Effective defenders and testers rely on a toolkit that spans discovery, analysis, exploitation, and detection. Tools accelerate repeatable tasks, surface weak configurations, and provide visibility into complex, distributed systems. Mastery includes not just running tools but interpreting results, chaining findings, and validating impact. A balanced toolkit supports both offensive validation and defensive monitoring.
+
 #### Nmap, Wireshark, Burp Suite
+These three tools anchor network and web application assessments. Nmap inventories hosts and services, fingerprints versions, and highlights exposed attack surface for deeper testing. Wireshark captures and decodes traffic to reveal protocol misuse, cleartext secrets, and anomalous flows that indicate compromise. Burp Suite proxies and manipulates web requests to uncover issues like broken access control, injection, and insecure deserialization.
+
+- **Nmap** supports scripts (NSE) that automate version checks, CVE probes, and misconfiguration detection, turning reconnaissance into actionable leads.  
+- **Wireshark** offers powerful filters and protocol dissectors, enabling precise hunting for suspicious conversations and misconfigurations.  
+- **Burp Suite** integrates scanning with manual exploitation workflows, intruder fuzzing, repeater testing, and extender add-ons for custom checks.
+
 #### Snort, Nessus, Aircrack-ng 
+These tools focus on detection, vulnerability posture, and wireless security. Snort provides signature- and rule-based IDS/IPS to alert on or block known malicious patterns in network traffic. Nessus enumerates vulnerabilities, missing patches, and risky defaults to prioritize remediation efforts across fleets. Aircrack-ng evaluates Wi-Fi protections, tests authentication schemes, and demonstrates risks of weak passphrases and legacy encryption.
+
+- **Snort** can be tuned with custom rules and thresholding to reduce noise while catching environment-specific threats.  
+- **Nessus** produces risk-ranked findings with remediation guidance, aiding SLAs and measurable vulnerability management programs.  
+- **Aircrack-ng** supports capture, analysis, and key recovery workflows that validate whether wireless configurations resist practical attacks.
+  
 ### 21. Career Path and Certifications
+Cybersecurity careers span hands-on roles (e.g., SOC analyst, pentester, DFIR) and strategic roles (e.g., security architect, GRC, product security). Progress typically blends foundational networking and OS skills, programming/scripting, and deep domain knowledge in one or two specializations. Certifications signal baseline competence or advanced expertise and often unlock interviews or compliance needs. Practical experience—labs, CTFs, homelabs, and real incidents—remains the strongest differentiator.
+
 #### Certified Ethical Hacker (CEH)
 CEH validates knowledge of attacker tooling, TTPs, and the ethical frameworks governing authorized testing. The curriculum surveys reconnaissance, enumeration, exploitation, post-exploitation, and reporting with a broad, tool-centric lens. It is often used as an entry-level benchmark for roles that need shared vocabulary and awareness of common attack paths. While not deeply hands-on, it can open doors to junior red team and assessment positions.
 
