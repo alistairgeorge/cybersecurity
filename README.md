@@ -242,15 +242,73 @@ Intrusion prevention systems are contemplated as augmentation of Intrusion Detec
 When IDS detects intrusion it only alerts network administration while Intrusion Prevention System(IPS) blocks the malicious packets before it reaches to destination.
 
 ### 5. Programming Languages
+Security engineering is equal parts system knowledge and the ability to express that knowledge in code. Practitioners script to automate investigations, build custom tooling for assessments, and prototype defenses embedded in pipelines and platforms. Multiple languages are useful because threats span the web, operating systems, networks, and embedded devices. A balanced toolkit lets you read other people’s code, reason about vulnerabilities, and ship maintainable fixes.
+
+Strong coding skills also improve collaboration with development teams. Clear, reproducible proofs of concept and minimal patches speed remediation and reduce friction. Knowing how compilers, runtimes, and package managers work helps assess supply-chain risks and dependency hygiene. Over time, fluency across scripting and systems languages yields better security outcomes.
+
 #### Python
+Python is the go-to language for quick automation, data handling, and glue code across tools and APIs. Its batteries-included philosophy and ecosystem (Requests, Scapy, pwntools) make it ideal for prototyping scanners, parsers, and exploit harnesses. Readability encourages collaboration across mixed teams of analysts and engineers. Performance-sensitive paths can be offloaded to native extensions when needed.
+
+- **Automation and orchestration.** Use Python to stitch scanners, SIEMs, and ticketing systems together for repeatable workflows.  
+- **Network and protocol tasks.** Craft and parse packets, fuzz parsers, and extract IOCs from PCAPs with mature libraries.  
+- **Blue and red use.** From log enrichment to exploit dev scaffolding, Python spans defensive and offensive needs.  
+
 #### JavaScript
+JavaScript dominates the client side and increasingly the server via Node.js, so it’s central to web security. Understanding JS and the DOM is essential for analyzing XSS, CSRF, clickjacking, and CSP behavior. On the backend, async patterns and package ecosystems introduce unique risks that defenders must monitor. Security reviews often hinge on recognizing how data flows through templating and API layers.
+
+- **Client-side insight.** Model sinks and sources, event handlers, and templating to identify injection and gadget chains.  
+- **Server-side concerns.** Manage dependency risk, SSRF in server-side rendering, and prototype pollution in object merging.  
+- **Testing helpers.** Build payloads, browser automations, and instrumentation to validate fixes and CSPs.  
+
 #### Bash Scripting
+Bash is the lingua franca of Unix-like systems and a force multiplier for responders and operators. Small scripts can enumerate hosts, sweep configurations, and collect forensic artifacts quickly. Because many security tools are CLI-first, Bash glues them together into pipelines. Careful quoting and input handling prevent self-inflicted command injection.
+
+- **Rapid triage.** One-liners and scripts gather logs, process lists, and network info across fleets via SSH.  
+- **Job control.** Schedule recurring scans and checks with cron and systemd timers to keep posture fresh.  
+- **Tool chaining.** Combine grep/awk/sed/jq with scanners and EDR CLIs to build lightweight workflows.  
+
 #### SQL
+SQL underpins most transactional systems and analytics platforms, so fluency aids both offense and defense. Knowing how queries are parsed and optimized helps identify injection risks and performance pitfalls. Investigations often require querying large log or event tables, where precise SQL saves hours. Least privilege, view design, and parameterization are day-to-day security levers.
+
+- **Hardened access.** Use roles, views, and row-level security to constrain who sees what.  
+- **Forensic querying.** Join auth logs, API calls, and anomalies to reconstruct attacker timelines.  
+- **Secure coding.** Enforce prepared statements and bind variables across app layers.  
 #### C/ C++/ Java/ Ruby 
+C and C++ expose memory and concurrency details that are vital for exploit analysis and secure systems programming. Java powers enterprise backends and Android apps, where secure serialization, sandboxing, and dependency hygiene matter. Ruby shows up in tooling like Metasploit and legacy web stacks where metaprogramming can introduce subtle bugs. Exposure to all four improves code review, threat modeling, and remediation quality.
+
+- **Memory safety literacy.** Understand buffer overflows, use-after-free, and mitigations (ASLR, DEP, stack canaries).  
+- **Runtime and ecosystem.** Manage JDK/JRE settings, deserialization risks, and gem/npm/maven dependency sprawl.  
+- **Interop awareness.** Read native extensions and FFI boundaries where memory bugs and type confusions emerge.  
+
 ### 6. Scanning and Enumeration
+Scanning and enumeration translate curiosity into actionable intelligence. Scanning identifies reachable hosts and exposed services; enumeration extracts details—versions, users, shares—that inform risk. Done well, these phases guide targeted testing and reduce noise by focusing on realistic attack paths. Defenders rely on the same techniques to measure exposure and validate hardening.
+
+Because networks are dynamic, results age quickly unless you automate and baseline them. Treat scans as observability: schedule them, diff outputs, and investigate deltas. Combine active probes with passive sources (flows, logs) to complete the picture. Always get proper authorization and scope to avoid disrupting production systems.
+
 #### Port Scanning
+Port scanning determines which TCP/UDP ports are open and what they imply about the underlying services. Timing, packet types, and host responsiveness affect accuracy and stealth. The goal is not just a list of numbers—it’s a hypothesis about roles, trust boundaries, and potential weaknesses. Good scans are reproducible, annotated, and feed directly into follow-up tests.
+
+- **Choose the right technique.** SYN, connect, and UDP scans trade speed, accuracy, and detectability; use them deliberately.  
+- **Scope and rate carefully.** Respect bandwidth and target sensitivity to avoid overwhelming fragile services.  
+- **Fingerprint services.** Version detection and scriptable probes turn ports into actionable software inventories.  
+- **Baseline exposure.** Track changes to open ports over time to catch accidental publishes and drift.  
+
 #### Service Enumeration
+Enumeration digs into discovered services to extract banners, capabilities, and security posture. It validates assumptions (e.g., the “web server” is actually an admin console) and uncovers weak defaults. Directory listings, SMB shares, SNMP communities, and RPC endpoints often leak rich metadata. This is where attack paths start to crystallize.
+
+- **Target high-value protocols.** SMB, RDP, SSH, LDAP, and databases deserve deeper probes for weak auth and misconfigurations.  
+- **Harvest metadata.** Collect banners, TLS certificates, headers, and error messages to map versions and frameworks.  
+- **Respect authentication.** Test with least-privileged creds when available to see what insiders or compromised accounts could reach.  
+- **Document thoroughly.** Record commands, parameters, and findings so teams can reproduce and remediate efficiently.  
+
 #### Vulnerability Scanning 
+Vulnerability scanning compares assets against known CVEs and misconfiguration checks to highlight likely weaknesses. It complements manual testing by providing breadth and repeatability, but results must be triaged to reduce false positives. Authenticated scans significantly improve fidelity by inspecting configs and patches from the inside. Integrating scan results into ticketing with SLAs keeps remediation on track.
+
+- **Prioritize by exploitability.** Rank by CVSS plus context—exposure, privilege required, and presence of known exploits.  
+- **Use authenticated modes.** Inside-out checks find missing patches and risky settings that unauthenticated scans miss.  
+- **Close the loop.** Retest after fixes, track aging vulnerabilities, and report trends to show posture improvement.  
+- **Align with change.** Tie scans to deployments and patch windows so findings map cleanly to responsible teams.  
+
 ### 7. Exploitation
 #### Common Vulnerabilities and Exploits
 Any flaw in an organization’s internal controls, system procedures, or information systems is a vulnerability in cyber security. Cybercriminals and Hackers may target these vulnerabilities and exploit them through the points of vulnerability.
@@ -266,13 +324,60 @@ In a buffer-overflow attack, the extra data sometimes holds specific instruction
 
 Attacker would use a buffer-overflow exploit to take advantage of a program that is waiting on a user’s input. There are two types of buffer overflows: stack-based and heap-based. Heap-based, which are difficult to execute and the least common of the two, attack an application by flooding the memory space reserved for a program. Stack-based buffer overflows, which are more common among attackers, exploit applications and programs by using what is known as a stack memory space used to store user input.
 ### 8. Web Application Security
+Web applications are prime targets because they’re publicly reachable and often sit in front of sensitive data and business logic. Attackers look for input handling flaws, broken access control, and weak session management to pivot from the edge into core systems. Secure design, disciplined implementation, and continuous testing are essential to prevent credential theft, data exfiltration, and account takeover. The OWASP Top Ten provides a practical baseline for prioritizing risks and guiding hardening efforts across the SDLC.
+
+Modern web stacks are complex, combining client-side scripts, APIs, microservices, and third-party integrations. That complexity expands the attack surface and makes visibility harder unless you standardize logging, tracing, and security testing. Security controls must cover user input, output encoding, authentication, authorization, and transport confidentiality. Treat web security as a living program—track changes, test frequently, and respond quickly to new classes of bugs.
+
 #### OWASP Top Ten
+The OWASP Top Ten is a community-driven list of the most critical web application risks, updated using industry telemetry and expert review. Teams use it to align secure coding standards, test plans, and training, and to measure progress over time. While not exhaustive, it captures classes of issues—like broken access control and injection—that recur across languages and frameworks. Mapping your controls and tests to these categories gives you broad coverage with pragmatic effort.
+
+- **Focus on access control first.** Broken access control consistently tops incident reports because it enables direct data exposure and privilege escalation; require explicit denies and verify server-side checks.  
+- **Harden inputs and outputs.** Normalize, validate, and constrain inputs on the server, and apply output encoding specific to the context (HTML, JS, CSS, URL) to block injection chains.  
+- **Build security into CI/CD.** Add SAST/DAST/SCA gates, threat-model new features, and track findings as first-class backlog items so regressions don’t ship.  
+- **Instrument for evidence.** Centralize logs, enable structured events for authz/authn decisions, and retain traces to support rapid triage and forensics.  
+
 #### SQL Injection
+SQL Injection (SQLi) occurs when user-controllable input is concatenated into queries, allowing attackers to alter database commands. Consequences range from credential disclosure and data tampering to full system compromise via stacked queries or procedure abuse. Strong defenses rely on parameterized statements and strict separation of code and data, not on blacklists or ad-hoc sanitization. Even ORM-heavy codebases can be vulnerable when developers fall back to raw queries.
+
+- **Always parameterize.** Use prepared statements or stored procedures with bound parameters so inputs cannot change query structure.  
+- **Least privilege at the DB.** Give application accounts only the minimal operations needed (e.g., SELECT, not DROP/ALTER), and split read/write roles where practical.  
+- **Validate and constrain inputs.** Enforce length, type, and whitelist rules at the API boundary to reduce unexpected query shapes and error surfaces.  
+- **Detect and monitor.** Alert on anomalous query patterns, excessive errors, and large result sets indicative of dumping or probing.  
+
 #### Cross-Site Scripting (XSS) 
+XSS lets attackers run scripts in a victim’s browser within the context of a trusted site. It enables session hijacking, credential theft, UI redressing, and supply-chain style injection through compromised third-party widgets. Stored, reflected, and DOM-based XSS differ in injection and execution paths but share the same root cause: untrusted data rendered into active contexts without proper encoding. Defense combines output encoding, template hygiene, and defense-in-depth via CSP.
+
+- **Encode for the right context.** Use auto-escaping templating engines and apply HTML/attribute/JS-specific encoders when injecting untrusted data.  
+- **Prefer safe DOM APIs.** Avoid `innerHTML` and dynamic script creation; use `textContent`, `setAttribute`, and safe templating.  
+- **Adopt CSP.** A well-tuned Content Security Policy (with nonces/hashes) restricts inline script execution and mitigates residual XSS.  
+- **Sanitize rich inputs.** For WYSIWYG or markdown features, sanitize with allowlists and robust libraries designed for untrusted HTML.  
 ### 9. Wireless Network Hacking
+Wireless networking extends the perimeter into the air, exposing traffic and control channels to anyone within range. Attackers target weak encryption, misconfigured access points, and poor client behavior to capture credentials or insert themselves into flows. Because RF environments are shared, availability attacks are easier than on wired networks, and rogue infrastructure can masquerade as trusted SSIDs. A sound program combines strong cryptography, disciplined configuration, and continuous monitoring.
+
+Enterprise Wi-Fi must be treated as an identity and access system, not just a transport. Authentication choices (PSK vs. 802.1X), certificate hygiene, and onboarding workflows directly affect risk. Segmentation is critical: guest, corporate, and IoT devices should not coexist on flat networks. Visibility into management frames, association patterns, and RF anomalies enables earlier detection of spoofing and Evil Twin activity.
+
 #### Wi-Fi Security
+Wi-Fi security protects confidentiality and integrity of traffic and governs who may join the network. Choices made during setup—cipher suites, key management, and authentication—determine resistance to sniffing and credential replay. Client posture also matters; outdated supplicants and auto-join behaviors are common footholds. Regular surveys and audits catch configuration drift and rogue gear.
+
+- **Prefer modern standards.** Use WPA3 where supported; otherwise enforce WPA2-AES only and disable legacy and WEP/TKIP options.  
+- **Segment by trust.** Place guests, BYOD, and IoT on isolated VLANs with restricted egress to minimize lateral movement.  
+- **Harden clients.** Disable auto-join to open networks, require VPN off-site, and keep supplicants and drivers patched.  
+- **Monitor the airspace.** Watch for rogue APs, Evil Twins, deauth floods, and unusual association spikes that suggest attacks.  
+
 #### WEP, WPA, WPA2
+Wi-Fi security protocols evolved from WEP’s flawed RC4 design to WPA2’s AES-based CCMP and now WPA3’s SAE and improved forward secrecy. WEP is irreparably broken and should never be used; WPA (with TKIP) is transitional and insecure by modern standards. WPA2-PSK remains common but inherits password strength limitations and PSK sharing risks. WPA3 raises the bar with SAE, individualized data encryption in open networks (OWE), and protections against offline guessing.
+
+- **Eliminate WEP/TKIP.** Any presence of legacy ciphers is an immediate risk and invites trivial compromise.  
+- **Strengthen PSKs.** If PSK is unavoidable, use long, random passphrases and rotate them; consider per-device PSKs for accountability.  
+- **Adopt 802.1X/EAP.** Enterprise authentication with certificates or secure EAP methods reduces shared secret exposure and improves revocation.  
+- **Plan WPA3 migration.** Validate device compatibility, enable transition modes carefully, and monitor for downgrade attempts.  
+
 #### Wireless Attacks 
+Common wireless attacks aim to steal credentials, downgrade security, or disrupt availability. Evil Twin access points and KARMA-style attacks lure clients by cloning SSIDs and responding to probe requests. Deauthentication/disassociation floods knock clients off networks to force rehandshakes or push them onto attacker-controlled infrastructure. Weak management frame protection and poor client heuristics amplify these risks.
+
+- **Evil Twin and captive portal phishing.** Attackers mimic trusted SSIDs and portals to harvest credentials; user training and certificate pinning reduce success.  
+- **Handshake capture and cracking.** Poor PSKs enable offline guesses; strong passphrases and WPA3’s SAE resist this vector.  
+- **KRACK/frag attacks (legacy).** Protocol edge cases allow replay or fragmentation abuse; patch clients/APs and disable obsolete options.  
 ### 10. Social Engineering
 #### Phishing
 
